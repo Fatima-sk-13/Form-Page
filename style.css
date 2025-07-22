@@ -1,0 +1,154 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #ffe6f0; /* soft pink */
+    font-family: 'Comic Sans MS', cursive, sans-serif; /* cute playful font */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.form-container {
+    background-color: #fff0f5;  
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    width: 800px;
+    text-align: center;
+}
+
+h1, h3 {
+    color: #cc3366; 
+}
+
+.form-sections {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.form-section {
+    flex: 1;
+    text-align: left;
+}
+
+.form-section label {
+    font-size: 1.1rem;
+    color: #cc3366;
+    display: block;
+    margin-top: 10px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+select {
+    width: 90%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 2px solid #ffb6c1;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.gender-box, .dob-select {
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.gender-box label, .form-section p {
+    color: #cc3366;
+    font-weight: bold;
+}
+
+.dob-select select {
+    margin-right: 10px;
+}
+
+button {
+    background-color: #cc3366;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #b12b59;
+}
+
+.dob-select select {
+    padding: 8px 12px;
+    margin-right: 10px;
+    border: 2px solid #ffb6c1;
+    border-radius: 5px;
+    font-size: 1rem;
+    background-color: #fff0f5;
+    color: #cc3366;
+}
+
+.dob-select select:focus {
+    outline: none;
+    border-color: #cc3366;
+}
+
+.form-group input[type="email"],
+.form-group input[type="password"] {
+    width: 300px;
+    padding: 10px;
+    height: 10px;
+    font-size: 1rem;
+    border: 2px solid #ffb6c1;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+.interest-group {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #ffe6f0;
+    border: 2px solid #ffb6c1;
+    border-radius: 10px;
+    width: 90%;
+}
+
+.interest-group h4 {
+    color: #cc3366;
+    margin-bottom: 10px;
+}
+
+.interest-group label {
+    display: block;
+    color: #cc3366;
+    font-size: 1.1rem;
+    margin: 5px 0;
+}
+
+.interest-group input[type="checkbox"] {
+    accent-color: #ff69b4;
+    margin-right: 8px;
+}
+
+.enter-btn {
+    background-color: #cc3366;
+    color: white;
+    padding: 5px 12px;   /* smaller padding */
+    font-size: 0.9rem;   /* smaller text */
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    width: auto;        /* or specify width like 80px */
+}
+.enter-btn:hover {
+    background-color: #b82e59;
+}
+
+.form-title {
+    text-align: center;
+    color: #cc3366;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}

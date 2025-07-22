@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="images/favicon...png">
+</head>
+
+<body>
+<div class="form-container">
+<form>
+    <h1>Please fill the form below</h1>
+<div class="form-sections">
+    <!-- Personal Details -->
+    <div class="form-section">
+        <h3>Personal Details🧒🏻</h3>
+        <label for="firstName">First Name:</label>
+        <input type="text" id="firstName" name="firstName">
+      
+        
+
+        <label for="lastName">Last Name:</label>
+        <input type="text" id="lastName" name="lastName">
+        
+        <label for="mobile">Mobile Number:</label>
+        <input type="tel" id="mobile" name="mobile" placeholder="e.g. +92 300 1234567">
+        <br>
+        
+
+        <p>Gender:</p>
+        <label><input type="radio" name="gender" value="Male"> Male</label>
+        <label><input type="radio" name="gender" value="Female"> Female</label>
+        <label><input type="radio" name="gender" value="Other"> Other</label>
+        <br>
+        <h3>Date of Birth📆:</h3>
+        <div class="dob-select">
+            <select name="birth-day">
+            <option>Day</option>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+            <option>6</option>
+            <option>7</option>
+            <option>8</option>
+            <option>9</option>
+            <option>10</option>
+            <option>11</option>
+            <option>12</option>
+            <option>13</option>
+            <option>14</option>
+            <option>15</option>
+            <option>16</option>
+            <option>17</option>
+            <option>18</option>
+            <option>19</option>
+            <option>20</option>
+            <option>21</option>
+            <option>22</option>
+            <option>23</option>
+            <option>24</option>
+            <option>25</option>
+            <option>26</option>
+            <option>27</option>
+            <option>28</option>
+            <option>29</option>
+            <option>30</option>
+            <option>31</option>
+    </select>
+            
+    <select name="birth-month" id="birth-month">
+            <option>Month</option>
+            <option>January</option>
+            <option>February</option>
+            <option>March</option>
+            <option>April</option>
+            <option>May</option>
+            <option>June</option>
+            <option>July</option>
+            <option>August</option>
+            <option>September</option>
+            <option>October</option>
+            <option>November</option>
+            <option>December</option>
+    </select>
+
+    <select name="birth-year" id="birth-year">
+            <option>Year</option>
+            <!-- Years 1980 to 2025 -->
+            <option>1980</option>
+            <option>1981</option>
+            <option>1982</option>
+            <option>1983</option>
+            <option>1984</option>
+            <option>1985</option>
+            <option>1986</option>
+            <option>1987</option>
+            <option>1988</option>
+            <option>1989</option>
+            <option>1990</option>
+            <option>1991</option>
+            <option>1992</option>
+            <option>1993</option>
+            <option>1994</option>
+            <option>1995</option>
+            <option>1996</option>
+            <option>1997</option>
+            <option>1998</option>
+            <option>1999</option>
+            <option>2000</option>
+            <option>2001</option>
+            <option>2002</option>
+            <option>2003</option>
+            <option>2004</option>
+            <option>2005</option>
+            <option>2006</option>
+            <option>2007</option>
+            <option>2008</option>
+            <option>2009</option>
+            <option>2010</option>
+            <option>2011</option>
+            <option>2012</option>
+            <option>2013</option>
+            <option>2014</option>
+            <option>2015</option>
+            <option>2016</option>
+            <option>2017</option>
+            <option>2018</option>
+            <option>2019</option>
+            <option>2020</option>
+            <option>2021</option>
+            <option>2022</option>
+            <option>2023</option>
+            <option>2024</option>
+            <option>2025</option>
+    </select>
+        </div>
+    </div>
+
+    <!-- Login Info -->
+    <div class="form-section">
+        <h3>Login Info</h3>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email">
+
+        <label for="password">Password:</label>
+        <div style="position: relative;">
+            <input type="password" id="password" name="password">
+            <span id="togglePassword" style="position:absolute; right:10px; top:10px; cursor:pointer;">👁️</span>
+        </div>
+
+
+        <label for="confirmPassword">Confirm Password:</label>
+        <input type="password" id="confirmPassword" name="confirmPassword">
+        <div class="interest-group">
+            <h4>Fields of Interest:</h4>
+            <label><input type="checkbox" name="interest" value="Web Development"> Web Development</label><br>
+            <label><input type="checkbox" name="interest" value="AI/ML"> AI / Machine Learning</label><br>
+            <label><input type="checkbox" name="interest" value="Mobile Apps"> Mobile App Development</label><br>
+            <label><input type="checkbox" name="interest" value="Data Science"> Data Science</label>
+        </div>
+
+    </div>
+
+</div>
+<button type="button"  id="signup-btn">SignUp</button>
+</form>
+<script src="script.js"></script>
+</body>
+</html>
