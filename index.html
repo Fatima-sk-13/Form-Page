@@ -11,22 +11,24 @@
 <body>
 <div class="form-container">
 <form>
-    <h1>Please fill the form below</h1>
+    <h1 style="margin-top: 150px;" >Please fill the form below</h1>
 <div class="form-sections">
     <!-- Personal Details -->
     <div class="form-section">
         <h3>Personal Details🧒🏻</h3>
         <label for="firstName">First Name:</label>
-        <input type="text" id="firstName" name="firstName">
+        <input type="text" id="firstName" name="firstName" >
+        <span class="error-msg"></span>
       
-        
 
         <label for="lastName">Last Name:</label>
         <input type="text" id="lastName" name="lastName">
+        <span class="error-msg"></span>
         
         <label for="mobile">Mobile Number:</label>
         <input type="tel" id="mobile" name="mobile" placeholder="e.g. +92 300 1234567">
         <br>
+        <span class="error-msg"></span>
         
 
         <p>Gender:</p>
@@ -145,16 +147,21 @@
         <h3>Login Info</h3>
         <label for="email">Email:</label>
         <input type="email" id="email" name="email">
+        <span class="error-msg"></span>
 
         <label for="password">Password:</label>
-        <div style="position: relative;">
-            <input type="password" id="password" name="password">
-            <span id="togglePassword" style="position:absolute; right:10px; top:10px; cursor:pointer;">👁️</span>
+        <div style="position: relative; display: flex; flex-direction: column;">
+        <input type="password" id="password" name="password">
+        <span id="togglePassword" style="position:absolute; right:30px; top:10px; cursor:pointer;">👁️</span>
+        <span class="error-msg"></span>
         </div>
 
+       
 
         <label for="confirmPassword">Confirm Password:</label>
         <input type="password" id="confirmPassword" name="confirmPassword">
+        <span class="error-msg"></span>
+
         <div class="interest-group">
             <h4>Fields of Interest:</h4>
             <label><input type="checkbox" name="interest" value="Web Development"> Web Development</label><br>

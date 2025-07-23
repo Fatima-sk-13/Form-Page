@@ -11,6 +11,7 @@ const day = document.querySelector('select[name="birth-day"]');
 const month = document.getElementById('birth-month');
 const year = document.getElementById('birth-year');
 const checkboxes = document.querySelectorAll('input[type="checkbox"][name="interest"]');
+const radiobutton = document.querySelectorAll('input[type="radio"][name="gender"]');
 const signupBtn = document.querySelector('#signup-btn');
 const togglePassword = document.getElementById('togglePassword');
 
@@ -27,12 +28,12 @@ function isValidEmail(emailValue) {
     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailValue);
 }
 
-
+//Message that shows under the input boxes
 function updateValidationMessage(input, message, color='red') {
     let msgElem = input.nextElementSibling;
-    if (!msgElem || !msgElem.classList.contains('validation-msg')) {
+    msgElem.className = 'validation-msg';
+    if (!msgElem|| !msgElem.classList.contains('validation-msg')) {
         msgElem = document.createElement('div');
-        msgElem.className = 'validation-msg';
         input.insertAdjacentElement('afterend', msgElem);
     }
     msgElem.textContent = message;
@@ -45,8 +46,9 @@ togglePassword.addEventListener('click', () => {
     togglePassword.textContent = password.type === 'text' ? '🙈' : '👁️';
 });
 
+//validating the inputs(text)
 
-[firstName, lastName, mobile].forEach(input => {
+[firstName, lastName, mobile,email].forEach(input => {
     input.addEventListener('input', () => {
         if (input.id === 'firstName' || input.id === 'lastName') {
             if (isValidName(input.value)) {
@@ -60,6 +62,13 @@ togglePassword.addEventListener('click', () => {
             } else {
                 updateValidationMessage(input, 'Invalid mobile number.', 'red');
             }
+        }
+          else if (input.id==='email'){
+            if(isValidEmail(input.value)){
+                 updateValidationMessage(input, 'Success!', 'green');
+             } else {
+                updateValidationMessage(input, 'Invalid email', 'red');}
+    
         }
     });
 });
@@ -101,6 +110,7 @@ checkboxes.forEach(cb => {
     });
 });
 
+
 signupBtn.addEventListener('click', (e) => {
     e.preventDefault();  // Prevent form reload
 
@@ -111,6 +121,7 @@ signupBtn.addEventListener('click', (e) => {
     if (!isValidName(lastName.value)) errors.push("Last name invalid.");
     if (!isValidMobile(mobile.value)) errors.push("Invalid mobile number.");
     if (!isValidEmail(email.value)) errors.push("Invalid email.");
+    
 
     // Password validations
     if (password.value.length < 6) {
@@ -123,10 +134,11 @@ signupBtn.addEventListener('click', (e) => {
         errors.push("Confirm password does not match.");
     }
 
-    // DOB dropdown validation
-    if (day.selectedIndex === 0 || month.selectedIndex === 0 || year.selectedIndex === 0) {
-        errors.push("Please select complete date of birth.");
-    }
+    const genderSelectedNow = Array.from(radiobutton).some(r => r.checked);
+    if (!genderSelectedNow) {
+    errors.push("Please select your gender.");
+}
+
 
     // Checkbox validation
     if (document.querySelectorAll('input[name="interest"]:checked').length !== 2) {

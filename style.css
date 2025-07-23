@@ -152,3 +152,8 @@ button:hover {
     font-size: 2rem;
     margin-bottom: 20px;
 }
+.error-msg {
+  font-size: 13px;
+  color: red;
+  margin-top: 4px;
+}
